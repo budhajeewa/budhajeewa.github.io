@@ -1,17 +1,3 @@
-.home{
+.center {
 	text-align: center;
-}
-
-.home .AngularBeginLogo{
-	margin: auto;
-}
-
-.home .logosArea{
-	margin: auto;
-	display: inline-block;
-}
-
-.home .logosArea .logo{
-	margin: 5px;
-	float: left;
 }

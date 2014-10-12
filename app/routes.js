@@ -2,31 +2,24 @@ define([
 	'app'
 ], function (app) {
 	app
-	.config([
+		.config([
 		'$urlRouterProvider',
 		'$stateProvider',
 		function (
-		$urlRouterProvider,
-		$stateProvider
+				$urlRouterProvider,
+				$stateProvider
 		) {
-			$urlRouterProvider.otherwise('/');
+				$urlRouterProvider.otherwise('/');
 
-			$stateProvider
-			.state('home', {
-				url: '/',
-				templateUrl: 'app/views/home.html',
-				controller: 'HomeController',
-				resolve: {
-					controller: function ($q) {
-						var deferred = $q.defer();
-						require(['controllers/HomeController'], function () {
-							deferred.resolve();
-						});
-
-						return deferred.promise;
-					}
-				}
-			})
+				$stateProvider
+					.state('home', {
+						url: '/',
+						templateUrl: 'app/views/home.html'
+					})
+					.state('AngularBegin', {
+						url: '/AngularBegin',
+						templateUrl: 'app/views/AngularBegin.html'
+					})
 		}
 	]);
 });
